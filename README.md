@@ -1,2 +1,3 @@
-# photowhere
-App para ver encontrar mejores lugares donde hacer fotografías o viajar.
+# Photowhere
+Web para ver encontrar mejores lugares donde hacer fotografías o viajar.
+https://acolmenero.site/photowhere
