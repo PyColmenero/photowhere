@@ -81,7 +81,6 @@ class Place {
 
 		this.own_map_button.attr("data-id", cplace.idPlace);
 		// IFRAME MAP
-		// var src_embed_map = "https://www.google.com/maps/embed/v1/view?key=AIzaSyAINHMRUzyxtFpiKQsT2cqknmS7QAlz-NU&center="+cplace.latitudePlace+","+cplace.longitudePlace+"&zoom=16&maptype=satellite"
 		// this.place_embed_map.attr("src", src_embed_map);
 
 		/*if (location.pathname.indexOf("map.html") != -1) {
