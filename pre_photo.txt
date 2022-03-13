@@ -1,0 +1,12 @@
+<div id="photo" style="display:none;">
+    <div class="close">
+        <img src="./img/cancel.svg" alt="cerrar ventana" id="close-photo">
+    </div>
+    <div id="photo-cont">
+        <img src="https://acolmenero.site/photowhere/img/places/" alt="previsualizar" id="img_pre">
+    </div>
+    <div id="arrows">
+        <div id="left_arrow"> <img src="https://acolmenero.site/photowhere/img/arrow.svg" alt="flecha izquierda"> </div>
+        <div id="right_arrow"> <img src="https://acolmenero.site/photowhere/img/arrow.svg" alt="flecha derecha"> </div>
+    </div>
+</div>

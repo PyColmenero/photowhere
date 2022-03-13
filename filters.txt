@@ -1,0 +1,36 @@
+<div id="filters" style="display:none;">
+    <div>
+        <div class="close">
+            <img src="./img/cancel.svg" alt="cerrar ventana" id="close-filter">
+        </div>
+        <h2 class="noselect">Filtros</h2>
+        <form>
+            <input type="text" placeholder="Busca algo..." id="general-filter">
+            <input type="text" placeholder="Ciudad" id="city-filter">
+            <select name="type" id="types-filter">
+                <option value="">Todos</option>
+                <option value="monumentos">Monumentos</option>
+                <option value="montaña">Montaña</option>
+                <option value="playa">Playa</option>
+                <option value="nolight">Sin contaminación luminica</option>
+                <option value="abandonado">Abandonado</option>
+                <option value="jardines">Jardines</option>
+                <option value="urbano">Urbano</option>
+                <option value="graffiti">Graffiti</option>
+                <option value="vistas">Vistas</option>
+                <option value="naturaleza">Naturaleza</option>
+                <option value="puentes">Puentes</option>
+                <option value="primaveral">Primaveral</option>
+                <option value="roca">Rocas</option>
+                <option value="rural">Rural</option>
+                <option value="basico">Básico</option>
+                <option value="bar">Bar</option>
+                <option value="vanguardia">Vanguardia</option>
+                <option value="lujo">Lujo</option>
+            </select>
+            <p id="nofilter" class="noselect">Borrar filtros</p>
+            <!-- <label><input type="checkbox" name="near" id="near"> Más cercanos</label> -->
+            <button id="btn-filter" type="button">Buscar</button>
+        </form>
+    </div>
+</div>

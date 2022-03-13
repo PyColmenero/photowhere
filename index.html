@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WHEREPICK</title>
+    <link rel="icon" href="./img/ma1.png">
+
+    <link rel="stylesheet" href="./css/style.css?v=5">
+    <link rel="stylesheet" href="./css/home.css?v=5">
+    <link rel="stylesheet" href="./css/place.css?v=5">
+    <link rel="stylesheet" href="./css/photo.css?v=5">
+    <link rel="stylesheet" href="./css/loading.css?v=5">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- font-family: 'Lato', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <!-- font-family: 'Montserrat', sans-serif; -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?v=5"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <h1>WHEREPICK</h1>
+    </nav>
+
+    <div id="active_pos" style="display: none;">
+        <div>
+            <h2>Dar acceso a la ubicación</h2>
+            <p>Si quiere ver los lugares más cercanos, y ubicarte automaticamente en el mapa donde esté usted, da acceso
+                a la ubicación</p>
+            <div id="buttons_pos">
+                <div id="accept_pos" class="accept_pos noselect">Permitir ubicación</div>
+                <div id="deny_pos" class="noselect">No, gracias</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="photo" style="display:none;">
+        <div class="close">
+            <img src="./img/cancel.svg" alt="cerrar ventana" id="close-photo">
+        </div>
+        <div id="photo-cont">
+            <img src="https://acolmenero.site/photowhere/img/places/" alt="previsualizar" id="img_pre">
+        </div>
+        <div id="arrows">
+            <div id="left_arrow"> <img src="https://acolmenero.site/photowhere/img/arrow.svg"
+                    alt="flecha izquierda">
+            </div>
+            <div id="right_arrow"> <img src="https://acolmenero.site/photowhere/img/arrow.svg" alt="flecha derecha">
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div id="place">
+            <div id="place-data" class="hide-data">
+                <div id="closediv" class="close">
+                    <img src="./img/cancel.svg" alt="cerrar ventana" id="close-place">
+                </div>
+                <div id="data_place">
+                    <div id="loading_place">
+                        <img src="./img/loading_b.gif" id="loading3" alt="Loading gif">
+                    </div>
+                    <div id="inject-data">
+                        <div id="share"> <img src="./img/share1.svg" alt=""> </div>
+                        <h2 id="place_name">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <h3 id="place_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <div id="social_media">
+                            <img alt="icono de la red social">
+                            <p></p>
+                        </div>
+                        <!-- <div id="place_types">
+                            <label>#Monumento</label>
+                            <label>#Playa</label>
+                        </div> -->
+                        <div id="place_photos" data-photos>
+                            <img src="https://acolmenero.site/photowhere/img/places/chipiona_03.jpg"
+                                alt="Foto 0 del lugar">
+                            <img src="https://acolmenero.site/photowhere/img/places/chipiona_01.jpg"
+                                alt="Foto 1 del lugar">
+                        </div>
+
+                        <p id="place_address"></p>
+                        <p id="place_googlemaps"><a href="#"> Ver en Google Maps </a></p>
+                        <div id="own_map_button" class="noselect" data-lat data-lng>
+                            <p>Ver en el mapa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="home">
+
+            <section id="near">
+                <div class="sectionTitle">
+                    <h2>Lugares más cercanos</h2>
+                    <h3><a href="./near.html" class="seemore" id="loc_seemore">Ver más</a></h3>
+                </div>
+                <div id="near_cont" class="near_cont">
+                    <img src="./img/loading_w.gif" id="loading1" alt="Loading gif">
+                </div>
+            </section>
+
+
+            <section id="popular">
+                <div class="sectionTitle">
+                    <h2>Lugares más populares</h2>
+                    <h3><a href="./popular.html" class="seemore">Ver más</a></h3>
+                </div>
+                <div id="popular_cont" class="popular_cont">
+                    <img src="./img/loading_w.gif" id="loading2" alt="Loading gif">
+                </div>
+            </section>
+
+
+            <section>
+                <div class="sectionTitle">
+                    <h2>Todos los tipos</h2>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/monumento.jpg" alt="monumentos">
+                    <div>
+                        <p> Monumentos </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/naturaleza.jpg" alt="naturaleza">
+                    <div>
+                        <p> Naturaleza </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/playa.jpg" alt="playa">
+                    <div>
+                        <p> Playa </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/color_cudillero_2.jpg" alt="color">
+                    <div>
+                        <p> Color </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/castillo_murallaAvila.jpg"
+                        alt="castillo">
+                    <div>
+                        <p> Castillos </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/molinosConsuegra.jpg" alt="molinos">
+                    <div>
+                        <p> Molinos </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/faroTrafalgar.jpg" alt="faro">
+                    <div>
+                        <p> Faros </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/cascada_presasPadrillo_0.jpg"
+                        alt="cascada">
+                    <div>
+                        <p> Cascadas </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/carretera_curvaCovadonga.jpg"
+                        alt="carretera">
+                    <div>
+                        <p> Carretera </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/rural_roblerillodegata.jpg" alt="rural">
+                    <div>
+                        <p> Rural </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/nolight.jpg" alt="nolight">
+                    <div>
+                        <p> Sin Contaminación Luminica </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/puentes.jpg" alt="puente">
+                    <div>
+                        <p> Puentes </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/urbano.jpg" alt="urbano">
+                    <div>
+                        <p> Urbano </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/estatuas_plazaMayorMadrid_0.jpg"
+                        alt="estatua">
+                    <div>
+                        <p> Estatuas </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/graffiti.jpg" alt="graffiti">
+                    <div>
+                        <p> Graffiti </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/roca.jpg" alt="roca">
+                    <div>
+                        <p> Rocas </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/acantiladoInfiernu_2.webp"
+                        alt="acantilado">
+                    <div>
+                        <p> Acantilados </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/pueblo_callejaFlores_0.jpg" alt="pueblo">
+                    <div>
+                        <p> Pueblos </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/nieve_lagoCovadonga_01.jpg" alt="nieve">
+                    <div>
+                        <p> Nevado </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/vanguardia.jpg" alt="vanguardia">
+                    <div>
+                        <p> Vanguardia </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/jardin_valdemoro.jpg" alt="jardin">
+                    <div>
+                        <p> Jardines </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/montaña.jpg" alt="montaña">
+                    <div>
+                        <p> Montaña </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/vistas_caboSilleiro.jpg" alt="vista">
+                    <div>
+                        <p> Vistas </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/primavera_parqueQuinta_1.jpg"
+                        alt="primavera">
+                    <div>
+                        <p> Primaveral </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/abandonado_sevilla_55.jpg"
+                        alt="abandonado">
+                    <div>
+                        <p> Abandonado </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/basico_plazaBadajoz_1.jpg" alt="basico">
+                    <div>
+                        <p> Básico </p>
+                    </div>
+                </div>
+                <div class="spot_type">
+                    <img src="https://acolmenero.site/photowhere/img/types/bar.jpg" alt="bar">
+                    <div>
+                        <p> Bar </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="nav__button">
+            <a href="./index.html"> <img src="https://acolmenero.site/photowhere/img/search.svg"> </a>
+        </div>
+        <div class="nav__button">
+            <a href="./map.html"> <img src="https://acolmenero.site/photowhere/img/map.svg" alt=""> </a>
+        </div>
+        <div class="nav__button">
+            <a href="./contribute.html"> <img src="https://acolmenero.site/photowhere/img/add.svg" alt=""> </a>
+        </div>
+        <div class="nav__button">
+            <a href="./profile.html"> <img src="https://acolmenero.site/photowhere/img/user.svg" alt=""> </a>
+        </div>
+    </footer>
+
+    <script src="./js/embed.js?v=5"></script>
+    <script src="./js/Geo.js?v=5"></script>
+    <script src="./js/Place.js?v=5"></script>
+    <script src="./js/Filter.js?v=5"></script>
+    <script src="./js/near.js?v=5"></script>
+    <script src="./js/load_photos.js?v=5"></script>
+    <script src="./js/home.js?v=5"></script>
+    <script src="./js/photo_pre.js?v=5"></script>
+
+    <!-- <script src="cordova.js?v=5"></script> -->
+    <script src="./js/index.js?v=5"></script>
+
+</body>
+
+</html>

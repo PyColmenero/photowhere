@@ -1,0 +1,35 @@
+<div id="place">
+    <div id="place-data" class="hide-data">
+        <div id="closediv" class="close">
+            <img src="./img/cancel.svg" alt="cerrar ventana" id="close-place">
+        </div>
+        <div id="data_place">
+            <div id="loading_place">
+                <img src="./img/loading_b.gif" id="loading3" alt="Loading gif">
+            </div>
+            <div id="inject-data">
+                <h2 id="place_name">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h3 id="place_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <div id="place_types">
+                    <label>#Monumento</label>
+                    <label>#Playa</label>
+                </div>
+                <div id="place_photos" data-photos>
+                    <img src="https://acolmenero.site/photowhere/img/places/chipiona_03.jpg" alt="Foto 0 del lugar">
+                    <img src="https://acolmenero.site/photowhere/img/places/chipiona_01.jpg" alt="Foto 1 del lugar">
+                </div>
+
+                <div id="own_map_button" class="noselect" data-lat data-lng>
+                    <p>Ver en el mapa</p>
+                </div>
+                <p id="place_googlemaps"><a href="#"> Ver en Google Maps </a></p>
+
+            </div>
+
+            <div id="related">
+                <p>Lugares cercanos:</p>
+                <div id="related-indected"></div>
+            </div>
+        </div>
+    </div>
+</div>
